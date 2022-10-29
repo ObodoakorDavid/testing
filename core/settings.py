@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,9 +28,9 @@ SECRET_KEY = 'django-insecure--fbb4v*bo+v8@npnxmi75d)m!1-w9=bvph96p!u-%afuc%^7&$
 
 # SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://web-production-f2db.up.railway.app/']
+ALLOWED_HOSTS = ['https://newtodo007.herokuapp.com/']
 
 
 # Application definition
@@ -79,10 +80,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ddb8q4m56ckkq2', 
+        'USER': 'exghfmkswimich',
+        'PASSWORD': '037f42b5dcb3ae6c9d6ccfc48e9f35fc179dbfde8895db3a580b4f512cf8dee1',
+        'HOST': 'ec2-3-220-207-90.compute-1.amazonaws.com', 
+        'PORT': '5432',
     }
 }
 
