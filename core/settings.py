@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure--fbb4v*bo+v8@npnxmi75d)m!1-w9=bvph96p!u-%afuc%^7&$
 
 # SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://web-production-f2db.up.railway.app/']
 
